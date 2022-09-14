@@ -29,7 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=f7750dc7-4fe9-403f-8463-4882fb7167f9' -H 'Content-Type:application/json' -d '{"msgtype":"text","text":{"content":"汇报工作进度","mentioned_list":["@all"]}}'
+        run: curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=f7750dc7-4fe9-403f-8463-4882fb7167f9' -H 'Content-Type:application/json' -d '{"msgtype":"text","text":{"mentioned_list":["@all"],"content":"汇报工作进度"}}'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

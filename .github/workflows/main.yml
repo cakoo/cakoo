@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-  - cron: '0 */1 * * *'
+  - cron: '0 12 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=aaf7673c-7359-42bd-aa35-edaca91ea120' -H 'Content-Type:application/json' -d '{"msgtype":"text","text":{"content":"赶紧打卡"}}'
+        run: curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=aaf7673c-7359-42bd-aa35-edaca91ea120' -H 'Content-Type:application/json' -d '{"msgtype":"text","text":{"content":"汇报工作进度"},"mentioned_list":"@all"}'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
